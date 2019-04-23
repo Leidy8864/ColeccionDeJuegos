@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="jbV-wh-CcO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CQb-Av-Dkm">
                             <connections>
-                                <segue destination="VxV-BK-oa4" kind="show" id="Z7i-I8-DA2"/>
+                                <segue destination="VxV-BK-oa4" kind="show" identifier="juegoSegue" id="Z7i-I8-DA2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,13 +76,22 @@
                                     <action selector="agregarTapped:" destination="VxV-BK-oa4" eventType="touchUpInside" id="dyR-7b-gKF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zao-Qd-1ty">
+                                <rect key="frame" x="165.5" y="349" width="43" height="30"/>
+                                <state key="normal" title="Borrar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="VxV-BK-oa4" eventType="touchUpInside" id="foc-Rz-fdh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="top" secondItem="fSG-ki-Ygl" secondAttribute="bottom" constant="20" id="2gA-Q1-xhm"/>
+                            <constraint firstItem="Zao-Qd-1ty" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="3YP-tf-Hhy"/>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="JyD-SU-9UX"/>
                             <constraint firstItem="kww-uJ-kCy" firstAttribute="width" secondItem="fSG-ki-Ygl" secondAttribute="width" id="Phg-nb-pdB"/>
                             <constraint firstItem="fSG-ki-Ygl" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="Ss8-1C-o58"/>
+                            <constraint firstItem="Zao-Qd-1ty" firstAttribute="top" secondItem="W4e-x6-EfI" secondAttribute="bottom" constant="15" id="VQw-EV-5LE"/>
                             <constraint firstItem="W4e-x6-EfI" firstAttribute="top" secondItem="kww-uJ-kCy" secondAttribute="bottom" constant="20" id="d8F-NZ-RSL"/>
                             <constraint firstItem="fSG-ki-Ygl" firstAttribute="top" secondItem="5F2-u2-lld" secondAttribute="top" constant="20" id="elJ-SZ-Mjn"/>
                             <constraint firstItem="W4e-x6-EfI" firstAttribute="centerX" secondItem="VP2-Ga-GQD" secondAttribute="centerX" id="hSx-EH-nDH"/>
@@ -105,12 +114,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="fSG-ki-Ygl" id="RfV-Z3-qWY"/>
+                        <outlet property="agregarActualizarBoton" destination="W4e-x6-EfI" id="YeJ-5U-0fz"/>
+                        <outlet property="eliminarBoton" destination="Zao-Qd-1ty" id="GMe-hw-df1"/>
                         <outlet property="tituloTextField" destination="kww-uJ-kCy" id="aEc-4o-AGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGP-zp-img" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="136"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pXN-zD-8iH">
